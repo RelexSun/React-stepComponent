@@ -6,8 +6,15 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
+export default function App() {
+  return (<div>
+    <Steps />
+    <Steps />
+  </div>);
+}
 
-function App() {
+
+function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -18,7 +25,7 @@ function App() {
   }
   function handleNext() {
     if (step < 3) {
-      setStep(step + 1);
+      setStep((curStep) => curStep + 1);
     };
   }
 
@@ -26,7 +33,7 @@ function App() {
 
   return (
     // react.fragment
-    <>
+    <div>
       {/* <button className="close" onClick={() => setIsOpen(false)}>&times;</button> */}
       <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;</button>
 
@@ -50,10 +57,9 @@ function App() {
         <button onClick={handleNext}>Next</button>
       </div>
     </div>)}
-    </>
+    </div>
   );
 
 
 }
 
-export default App;
