@@ -37,11 +37,13 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  transition: .3s ease-in-out;
 }
 
 .numbers .active {
   background-color: #7950f2;
   color: #fff;
+
 }
 
 .message {
@@ -100,3 +102,23 @@ h3 {
   color: #7950f2;
 }
 
+.open {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  background-color: #f7f7f7;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 15px;
+  transition: .2s ease-in-out;
+
+}
+
+.open:hover {
+  background-color: #7950f2;
+  color: #fff;
+}
